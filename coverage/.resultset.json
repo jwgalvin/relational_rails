@@ -243,6 +243,7 @@
           1,
           null,
           1,
+          1,
           null
         ]
       },
@@ -264,8 +265,36 @@
           1,
           null
         ]
+      },
+      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/models/member.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/controllers/cults_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1643773856
+    "timestamp": 1643777965
   }
 }
