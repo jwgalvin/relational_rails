@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_165624) do
+ActiveRecord::Schema.define(version: 2022_02_02_190135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cults", force: :cascade do |t|
+    t.string "name"
+    t.integer "member_size"
+    t.boolean "open_enrollment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "name"
@@ -21,6 +29,9 @@ ActiveRecord::Schema.define(version: 2022_02_02_165624) do
     t.integer "children"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "cult_id"
+    t.index ["cult_id"], name: "index_members_on_cult_id"
   end
 
+  add_foreign_key "members", "cults"
 end
