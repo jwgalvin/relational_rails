@@ -1,0 +1,2 @@
+class Cult < ApplicationRecord
+end
