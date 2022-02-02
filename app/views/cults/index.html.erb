@@ -1,6 +1,6 @@
-<h1>Members Index</h1>
-<% @members.each do |member| %>
-  <h3><%= member.name%></h3>
-  <p>Children:<%= member.children %></p>
-  <p>Married:<%= member.married %></p>
+<h1>Cults Index</h1>
+<% @cults.each do |cult| %>
+  <h3><%= cult.name%></h3>
+  <p>Cults:<%= cult.member_size %></p>
+  <p>Open Enrollment:<%= cult.open_enrollment %></p>
 <% end%>
