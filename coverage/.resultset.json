@@ -256,7 +256,7 @@
           null
         ]
       },
-      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/models/cult.rb": {
+      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/models/member.rb": {
         "lines": [
           1,
           1,
@@ -270,78 +270,14 @@
           null
         ]
       },
-      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/models/member.rb": {
+      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/models/cult.rb": {
         "lines": [
           1,
           1,
-          null
-        ]
-      },
-      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/controllers/members_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/joegalvin/turing/2module/challenges/relational_rails/app/controllers/cults_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1643838461
+    "timestamp": 1643842307
   }
 }

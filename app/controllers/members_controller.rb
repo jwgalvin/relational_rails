@@ -4,7 +4,6 @@ class MembersController < ApplicationController
   end
 
   def show
-    #binding.pry
     @member = Member.find(params[:id])
   end
 
