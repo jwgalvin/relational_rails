@@ -1,2 +1,0 @@
-class Cult < ApplicationRecord
-end

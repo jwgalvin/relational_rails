@@ -10,20 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_045421) do
+ActiveRecord::Schema.define(version: 2022_02_02_165624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cults", force: :cascade do |t|
-    t.string "name"
-    t.integer "member_size"
-    t.boolean "open_enrollment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "member_id"
-    t.index ["member_id"], name: "index_cults_on_member_id"
-  end
 
   create_table "members", force: :cascade do |t|
     t.string "name"
@@ -33,5 +23,4 @@ ActiveRecord::Schema.define(version: 2022_02_02_045421) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "cults", "members"
 end

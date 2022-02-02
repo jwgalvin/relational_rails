@@ -4,7 +4,7 @@ class CreateMembers < ActiveRecord::Migration[5.2]
       t.string :name
       t.boolean :married
       t.integer :children
-
+      
       t.timestamps
     end
   end

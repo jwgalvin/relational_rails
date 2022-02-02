@@ -1,0 +1,3 @@
+class Members < ApplicationRecord
+
+end
