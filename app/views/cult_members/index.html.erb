@@ -1,0 +1,6 @@
+<h1>Cultist Index</h1>
+
+<% @members.each do |cultist| %>
+ <h3><%= link_to cultist.name, "/members/#{cultist.id}"%></h3> </br>
+<% end%>
+<h3> The average number of kids in <%= @cult.name %> is <%= @cult.average_num_kids %>.</h3>

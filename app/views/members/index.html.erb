@@ -1,0 +1,6 @@
+<h1>Members Index</h1>
+<% @member.each do |cultist| %>
+  <h3><%= cultist.name%></h3>
+  <p>Children:<%= cultist.children %></p>
+  <p>Married:<%= cultist.married %></p>
+<% end%>
