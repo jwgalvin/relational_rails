@@ -12,7 +12,8 @@ describe "Cult members index page" do
   it "can see a page with all members" do
     # binding.pry
     visit "cults/#{@cult.id}/members"
-    # save_and_open_page
+    save_and_open_page
+    
     expect(page).to have_content("Cultist Index")
     expect(page).to have_content(@marshall.name)
     expect(page).to have_content(@member_2.name)
