@@ -31,6 +31,6 @@ describe "Cult members index page" do
   it "shows the average number of children" do
     visit "/cults/#{@cult.id}/members"
 
-    expect(page).to have_content("The average Heaven's Gate's cultist have 1 child.")
+    expect(page).to have_content("The average number of kids in Heaven's Gate is 1.0")
   end
 end
