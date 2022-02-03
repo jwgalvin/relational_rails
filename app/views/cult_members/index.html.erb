@@ -1,0 +1,6 @@
+<h1>Cultist Index</h1>
+
+<% @members.each do |cultist| %>
+  <%= link_to cultist.name, "/members/#{cultist.id}"%>
+
+<% end%>

@@ -7,7 +7,7 @@ describe "index page for members" do
     member = cult.members.create!(name: "Marshall Applewhite", married: true, children: 0)
     member_2 =cult.members.create!(name: "Bonnie Nettles", married: true, children: 0)
 
-    visit '/cults/members'
+    visit '/members'
     # binding.pry
     save_and_open_page
     expect(page).to have_content(cult.member.name)
