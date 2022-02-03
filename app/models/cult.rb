@@ -2,7 +2,12 @@ class Cult < ApplicationRecord
   has_many :members
 
   def average_num_kids
-    avg = self.members.average(:children)
-    avg
+    members.average(:children)
   end
+
+  def cult_count
+    Cult.count
+  end
+
+  
 end

@@ -4,7 +4,6 @@ class CultsController < ApplicationController
   end
 
   def show
-    #binding.pry
     @cults = Cult.find(params[:id])
   end
 

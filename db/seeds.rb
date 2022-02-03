@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# @heaven = Cult.create!(name: "Heaven's Gate", member_size: 323, open_enrollment: true)
-# @waco = Cult.create!(name: "Branch Davidian", member_size: 42, open_enrollment: false)
-# @marshall = @heaven.members.create!(name: "Marshall Applewhite", married: true, children: 0)
-# @bonnie = @heaven.members.create!(name: "Bonnie Nettles", married: true, children: 0)
-# @david = @waco.members.create!(name: "David Khouresh", married: true, children: 32)
+@heaven = Cult.create!(name: "Heaven's Gate", member_size: 323, open_enrollment: true)
+@waco = Cult.create!(name: "Branch Davidian", member_size: 42, open_enrollment: false)
+@marshall = @heaven.members.create!(name: "Marshall Applewhite", married: true, children: 0)
+@bonnie = @heaven.members.create!(name: "Bonnie Nettles", married: true, children: 0)
+@david = @waco.members.create!(name: "David Khouresh", married: true, children: 32)
