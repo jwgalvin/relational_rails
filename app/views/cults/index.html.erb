@@ -1,5 +1,5 @@
 <h1>Cults Index</h1>
-<% @cults.each do |cult| %>
+<% @cults.reverse_each do |cult| %>
   <h3><%= cult.name%></h3>
   <!-- <p>Cults:<%= cult.member_size %></p>
   <p>Open Enrollment:<%= cult.open_enrollment %></p> -->

@@ -12,7 +12,6 @@ describe "shows a single page" do
     expect(page).to have_content(member.created_at)
     expect(page).to have_content(member.updated_at)
     expect(page).to have_content(member.children)
-    # expect(page).to have_content(member.id)
     expect(page).to_not have_content(member_2.name)
   end
 
