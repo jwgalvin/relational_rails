@@ -45,4 +45,12 @@ describe "Cult members index page" do
     expect(page).to have_content(@marshall.created_at)
     expect(page).to have_content(@member_2.updated_at)
   end
+
+  it "links to the /members page" do
+    visit "/members"
+    save_and_open_page
+    #click_button 'Cultist Index'
+
+    expect(page).to have_selector(:link_or_button, "Cultist Index")
+  end
 end
