@@ -5,9 +5,10 @@ class Cult < ApplicationRecord
     members.average(:children)
   end
 
-  def cult_count
-    Cult.count
+  def count_members
+    # binding.pry
+    members.count
   end
 
-  
+
 end
