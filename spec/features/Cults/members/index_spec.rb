@@ -33,4 +33,14 @@ describe "Cult members index page" do
 
     expect(page).to have_content("The average number of kids in Heaven's Gate is 1.0")
   end
+
+  it "includes data from each cultist" do
+    visit "/cults/#{@cult.id}/members"
+    save_and_open_page
+    expect(page).to have_content(@marshall.name)
+    expect(page).to have_content(@marshall.married)
+    expect(page).to have_content(@marshall.children)
+    expect(page).to have_content(@marshall.created_at)
+    expect(page).to have_content(@marshall.updated_at)
+  end
 end
