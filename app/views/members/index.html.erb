@@ -2,5 +2,5 @@
 <% #binding.pry  %>
 <% @member.each do |cultist| %>
     <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
-    <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%></p>
+    <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%> Associated cult id:<%= cultist.cult_id%></p>
 <%end%>
