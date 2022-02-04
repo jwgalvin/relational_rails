@@ -21,4 +21,11 @@ describe "index page for Cults" do
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")
   end
+  it "links to the /members page" do
+    visit "/cults"
+    #save_and_open_page
+    #click_button 'Cultist Index'
+
+    expect(page).to have_selector(:link_or_button, "Cult Index")
+  end
 end
