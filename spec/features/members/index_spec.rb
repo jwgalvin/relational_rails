@@ -21,24 +21,13 @@ describe "Cult members index page" do
 
   it "links to each cultist" do
     visit "/members"
-
-    click_on @marshall.name
-    expect(current_path).to eq("/members/#{@marshall.id}")
-  end
-  it "links to each cultist" do
-    visit "/members"
-    click_on @member_2.name
-    expect(current_path).to eq("/members/#{@member_2.id}")
-  end
-  it "links to each cultist" do
-    visit "/members"
     click_on @member_3.name
     expect(current_path).to eq("/members/#{@member_3.id}")
   end
 
   it "includes data from each cultist" do
     visit "/members"
-    save_and_open_page
+    #save_and_open_page
     expect(page).to have_content(@marshall.name)
     expect(page).to have_content(@member_2.married)
     expect(page).to have_content(@member_3.children)
@@ -48,7 +37,7 @@ describe "Cult members index page" do
 
   it "links to the /members page" do
     visit "/members"
-    save_and_open_page
+    #save_and_open_page
     #click_button 'Cultist Index'
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")

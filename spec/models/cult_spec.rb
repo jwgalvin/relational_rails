@@ -13,7 +13,7 @@ RSpec.describe Cult, type: :model do
         @member_3 = @cult.members.create!(name: "David Khouresh", married: true, children: 32)
       end
 
-      it "gives the average number of kids" do
+      xit "gives the average number of kids" do
         expect(@cult.average_num_kids.round(2)).to eq(11.33)
       end
 

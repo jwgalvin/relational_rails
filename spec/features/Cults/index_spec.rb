@@ -10,13 +10,13 @@ describe "index page for Cults" do
 
     visit '/cults'
 
-    save_and_open_page
+    #save_and_open_page
     expect(science.name).to appear_before(waco.name)
     expect(waco.name).to appear_before(heaven.name)
   end
   it "links to the /members page" do
     visit "/cults"
-    save_and_open_page
+    #save_and_open_page
     #click_button 'Cultist Index'
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")
