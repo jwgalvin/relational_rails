@@ -6,9 +6,11 @@ class Cult < ApplicationRecord
   end
 
   def count_members
-    # binding.pry
     members.count
   end
 
+  def new
+
+  end
 
 end

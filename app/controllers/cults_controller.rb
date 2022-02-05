@@ -6,19 +6,16 @@ class CultsController < ApplicationController
   def show
     @cults = Cult.find(params[:id])
   end
-
-  # def self.order_by_created_at
-  #   self.order(created_at: :desc)
-  # end
-  # def create
-  #   member = Member.new({
-  #
-  #     })
-  #     task.save
-  #     redirect_to '/members'
-  # end
-
   def new
+  end
+
+  def create
+    cult = Cult.create!({
+      name: params[:cult][:name],
+      member_size: params[:cult][:member_size],
+      open_enrollment: params[:cult][:open_enrollment]
+      })
+    redirect_to '/cults'
   end
 
   def edit

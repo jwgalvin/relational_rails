@@ -1,0 +1,14 @@
+<form action="/cults/new" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
+  <p></p>
+  <p></p>
+  Cult to add to database:<br>
+  <input type="text" name="cult[name]" /><br/n>
+  How many members, num only: <br>
+  <input type="integer"name='cult[member_size]'><br>
+  Friendly to outsiders: <br>
+  <input type="boolean"name='cult[open_enrollment]'><br>
+  <input type='submit'>
+</form>
