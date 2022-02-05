@@ -19,13 +19,12 @@ describe "Cult members index page" do
     expect(page).to_not have_content(@member_3.name)
   end
 
-  xit "links to each cultist" do
+  it "links to each cultist" do
     visit "cults/#{@cult.id}/members"
 
-    click_on @marshall.name
-
     expect(page).to have_selector(:link_or_button, @marshall.name)
-    #expect(current_path).to eq("/members/#{@marshall.id}")
+    click_on @marshall.name
+    expect(current_path).to eq("/members/#{@marshall.id}")
   end
 
   it "shows the average number of children" do
@@ -47,16 +46,10 @@ describe "Cult members index page" do
   it "links to the /members page" do
     visit "/cults/#{@cult.id}/members"
     #save_and_open_page
-    #click_button 'Cultist Index'
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")
+    click_button 'Cultist Index'
+    expect(current_path).to eq("/cults/#{@cult.id}/members")
   end
 
-  it "links to the /members page" do
-    visit "/cults/#{@cult.id}/members"
-    #save_and_open_page
-    #click_button 'Cultist Index'
-
-    expect(page).to have_selector(:link_or_button, "Cult Index")
-  end
 end
