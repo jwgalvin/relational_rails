@@ -23,14 +23,14 @@ describe "shows a Cult per page" do
     it "displays the number of members at the bottom of the page." do
 
     visit "/cults/#{@heaven.id}"
-    save_and_open_page
+    #save_and_open_page
     expect(@heaven.count_members).to eq(3)
     expect(page).to have_content("There are 3 cultist listed.")
   end
 
   it "links to the /members page" do
     visit "/cults/#{@heaven.id}"
-    save_and_open_page
+    #save_and_open_page
     #click_button 'Cultist Index'
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")

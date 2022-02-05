@@ -23,10 +23,15 @@ describe "shows a single page" do
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")
   end
-  it "links to the /members page" do
+  it "links to the /cult index" do
     visit "/members/#{@member.id}"
 
     expect(page).to have_selector(:link_or_button, "Cult Index")
   end
 
+  it "links to the /cult members" do
+    visit "/cults/#{@cult.id}"
+
+    expect(page).to have_selector(:link_or_button, "#{@cult.name} Member's Index")
+  end
 end
