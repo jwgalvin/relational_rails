@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/members/:id', to: 'members#show'
   get '/cults', to: 'cults#index'
   get '/cults/:cult_id/members', to: 'cult_members#index'
+  get '/cults/:id', to: 'cults#show'
   #get '/cults/members', to:
 
   #Ians work

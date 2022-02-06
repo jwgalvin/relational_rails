@@ -4,10 +4,12 @@ class CultsController < ApplicationController
   end
 
   def show
-    #binding.pry
     @cults = Cult.find(params[:id])
   end
 
+  # def self.order_by_created_at
+  #   self.order(created_at: :desc)
+  # end
   # def create
   #   member = Member.new({
   #

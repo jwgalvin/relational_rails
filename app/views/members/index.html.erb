@@ -1,6 +1,6 @@
-<h1>Members Index</h1>
+<h1>Worldwide Cultist Index</h1>
+<% #binding.pry  %>
 <% @member.each do |cultist| %>
-  <h3><%= cultist.name%></h3>
-  <p>Children:<%= cultist.children %></p>
-  <p>Married:<%= cultist.married %></p>
-<% end%>
+    <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
+    <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%> Associated cult id:<%= cultist.cult_id%></p>
+<%end%>
