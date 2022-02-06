@@ -22,6 +22,17 @@ describe "Edit cultist page" do
     expect(page).to have_content('Children count:')
     expect(page).to have_content('Marital status:')
   end
-  
+
+  it "it will accept data and go to show page and display changes" do
+    visit "/members/#{@marshall.id}/edit"
+    fill_in('name', with: 'Marshal Applewhite')
+    fill_in('children', with: 6)
+    fill_in('married', with: false)
+
+    click_button "Edit Cult Member"
+
+    expect(current_path).to eq("/members/#{@marshall.id}")
+    #save_and_open_page
+  end
 
 end
