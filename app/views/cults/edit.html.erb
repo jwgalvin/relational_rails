@@ -1,0 +1,10 @@
+<form action="/cults/<%= @cults.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit <%="#{@cults.name}"%> data here.</p>
+
+  Adjust cult name:<input type='text' name='cult[name]' value="<%=@cults.name%>"/><br>
+  Adjust member count: <input type='integer' name='cult[member_size]' value="<%=@cults.member_size%>"/><br/>
+  Adjust enrollment type:<input type='boolean' name='cult[open_enrollment]' value="<%=@cults.open_enrollment%>"/><br/>
+  <input type='submit'/>
+</form>

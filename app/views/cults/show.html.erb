@@ -1,4 +1,8 @@
+
 <button><a href="/members"><%="#{@cults.name}"%> Member's Index</a></button>
+<% @path = "/cults/#{@cults.id}/edit" %>
+<% #binding.pry %>
+<button><a href=<%= @path%>>Update Cult Here</a></button>
 
 <h1><%= @cults.name %></h1>
 <p>Number of cultists:<%= @cults.member_size %></p>
