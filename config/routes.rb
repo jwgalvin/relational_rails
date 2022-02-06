@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   #get '/cults/members', to:
 
   #Ians work songs = ferret cage , artist = ferret
-  get '/ferret_cages', to: 'ferret_cages#index'
+  get '/cages', to: 'cages#index'
+  get '/cages/:id', to: 'cages#show'
 end
