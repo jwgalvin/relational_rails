@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_04_215651) do
+ActiveRecord::Schema.define(version: 2022_02_05_002536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cages", force: :cascade do |t|
+    t.string "title"
+    t.boolean "is_open"
+    t.integer "ferret_count"
+    t.integer "ferret_capacity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cults", force: :cascade do |t|
     t.string "name"
@@ -23,10 +32,14 @@ ActiveRecord::Schema.define(version: 2022_02_04_215651) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ferretcages", force: :cascade do |t|
+  create_table "ferrets", force: :cascade do |t|
     t.string "name"
+    t.boolean "is_clean"
+    t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "cage_id"
+    t.index ["cage_id"], name: "index_ferrets_on_cage_id"
   end
 
   create_table "members", force: :cascade do |t|
@@ -39,5 +52,6 @@ ActiveRecord::Schema.define(version: 2022_02_04_215651) do
     t.index ["cult_id"], name: "index_members_on_cult_id"
   end
 
+  add_foreign_key "ferrets", "cages"
   add_foreign_key "members", "cults"
 end
