@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   get '/members/:id', to: "members#show"
   get '/cults', to: 'cults#index'
   get '/cults/new', to: 'cults#new'
-  get '/cults/:cult_id/members', to: 'cult_members#index'
+  get '/cults/:id/members', to: 'cult_members#index'
   get '/cults/:id', to: 'cults#show'
-  post '/cults/new', to: 'cults#create'
+  get 'cults/new', to: 'cults#new'
+  post '/cults', to: 'cults#create'
   get '/cults/:id/edit', to: 'cults#edit'
   patch '/cults/:id/', to: 'cults#update'
   delete '/cults/:id', to: 'cults#destroy'
+  get '/cults/:id/members/new', to: 'cult_members#create'
+  #post '/cults/:id/members/new', to: 'cult_members#create'
 end

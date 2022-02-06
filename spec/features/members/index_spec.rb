@@ -42,9 +42,11 @@ describe "Cult members index page" do
   end
   it "links to the /members page" do
     visit "/members"
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_selector(:link_or_button, "Cult Index")
+    click_link('Cult Index')
+    expect(current_path).to eq('/cults')
   end
 
-  
+
 end

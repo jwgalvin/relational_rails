@@ -1,14 +1,11 @@
-<form action="/cults/new" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<%= form_with url: '/cults', method: :post, local: true do |form|%>
+    <%= form.label "New cult name" %>
+    <%= form.text_field :name %><br>
+    <%= form.label "Member size" %>
+    <%= form.text_field :member_size %><br>
+    <%= form.label "Open enrollment" %>
+    <%= form.text_field :open_enrollment %><br>
+    Open Enrollment must be true or false <br>
 
-
-  <p></p>
-  <p></p>
-  Cult to add to database:<br>
-  <input type="text" name="cult[name]" /><br/n>
-  How many members, num only: <br>
-  <input type="integer"name='cult[member_size]'><br>
-  Friendly to outsiders: <br>
-  <input type="boolean"name='cult[open_enrollment]'><br>
-  <input type='submit'>
-</form>
+    <%= form.submit "Create Cult"%>
+<% end %>

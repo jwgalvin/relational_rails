@@ -1,6 +1,6 @@
-
-<button><a href="/members"><%="#{@cults.name}"%> Member's Index</a></button>
 <% @path = "/cults/#{@cults.id}/edit" %>
+<% @path2 = "/cults/#{@cults.id}/members" %>
+<button><a href=<%= @path2%>><%="#{@cults.name}"%> Member's Index</a></button>
 <% #binding.pry %>
 <button><a href=<%= @path%>>Update Cult Here</a></button>
 

@@ -1,6 +1,6 @@
-
+<% @path = "/cults/#{@cults.id}/members/new" %>
+<button><a href='<%= @path%>'>Add Cult Member</a></button>
 <% @members.each do |cultist| %>
     <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
     <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%></p>
 <%end%>
-<h3> The average number of kids in <%= @cult.name %> is <%= @cult.average_num_kids %>.</h3>
