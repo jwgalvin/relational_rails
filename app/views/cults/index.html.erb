@@ -1,0 +1,4 @@
+<h1>Cults Index</h1>
+<%  Cult.order(created_at: :desc).each do |cult| %>
+  <h3><%= cult.name%></h3>
+<% end%>
