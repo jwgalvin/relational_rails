@@ -50,7 +50,7 @@ describe "Cult members index page" do
     visit "/cults/#{@waco.id}/members"
     expect(page).to have_content("Add Cult Member")
     click_link 'Add Cult Member'
-    save_and_open_page
+    # save_and_open_page
     expect(current_path).to eq("/cults/#{@waco.id}/members/new")
   end
 
@@ -61,7 +61,7 @@ describe "Cult members index page" do
     expect(page).to have_content('Marital status:')
   end
 
-  it "US13, part has can add member data via forms" do
+  it "US13, part 3 has can add member data via forms" do
     visit "/cults/#{@waco.id}/members/new"
     fill_in('name' , with: 'Vernon Howell')
     fill_in('children', with: 13)
@@ -69,8 +69,9 @@ describe "Cult members index page" do
 
     click_button 'Create Cult Member'
 
-    new_member_id = Member.last.id
-    expect(current_path).to eq("/cults/#{new_member_id}")
+
+    expect(current_path).to eq("/cults/#{@waco.id}/members")
     expect(page).to have_content("Vernon Howell")
+    save_and_open_page
   end
 end

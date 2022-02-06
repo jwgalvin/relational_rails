@@ -1,6 +1,17 @@
-<%= form_with url: '/cults/:id/new', method: :post, local:true do |form| %>
-  <%= form.label :name%>
-  <%= form.text_field :name%>
+<%= form_with url: "/cults/#{@cults.id}/new", method: :post, local:true do |form| %>
+
+  <h3>  Fill out <%= "#{@cults.name}" %>'s new member below </h3>
+  <%= form.label 'Cultist name:'%>
+  <%= form.text_field :name%><br>
+  <%= form.label 'Children count:'%>
+  <%= form.text_field :children%><br>
+  <%= form.label 'Marital status:'%>
+  <%= form.text_field :married%><br>
+
+  Marital status is true or false.<br>
+
+
+  <%= form.submit "Create Cult Member"%>
   <% end %>
 
 

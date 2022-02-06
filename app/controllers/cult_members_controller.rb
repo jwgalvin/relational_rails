@@ -3,19 +3,20 @@ class CultMembersController < ApplicationController
   def index
     @cults = Cult.find(params[:id])
     @members = @cults.members
+    # binding.pry
   end
 
   def new
+    @cults = Cult.find(params[:id])
   end
 
   def create
-    @cults = Cult.find(params[:id])
-    # binding.pry
-    member = @cults.members.create!({
-      name: params[:member][:name],
-      children: params[:member][:children],
-      married: params[:member][:married]
+    cult = Cult.find(params["id"])
+    member = cult.members.create!({
+      name: params[:name],
+      children: params[:children],
+      married: params[:married]
       })
-    redirect_to "/cults/#{@cults.id}/members/"
+    redirect_to "/cults/#{cult.id}/members"
   end
 end

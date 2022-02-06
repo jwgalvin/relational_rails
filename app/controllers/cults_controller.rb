@@ -1,5 +1,6 @@
 class CultsController < ApplicationController
   def index
+    @cults= Cult.all
   end
 
   def show
@@ -24,6 +25,10 @@ class CultsController < ApplicationController
     @cults = Cult.find(params[:id])
   end
 
+  def cult_params
+    params.permit(:name)
+  end
+  
   def update
     cult = Cult.find(params[:id])
     cult.update({
