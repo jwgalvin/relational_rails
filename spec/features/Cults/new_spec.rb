@@ -27,6 +27,6 @@ describe "US 11, will create a new cult" do
     new_cult_id = Cult.last.id
     expect(current_path).to eq("/cults/#{new_cult_id}")
     expect(page).to have_content("4chan")
-    save_and_open_page
+    #save_and_open_page
   end
 end
