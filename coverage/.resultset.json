@@ -251,6 +251,7 @@
           null,
           null,
           1,
+          1,
           null
         ]
       },
@@ -278,14 +279,26 @@
           null
         ]
       },
-      "/Users/ianross/turing/2mod/relational_rails/app/models/ferret.rb": {
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/cages_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
           1,
           null
         ]
       }
     },
-    "timestamp": 1644021715
+    "timestamp": 1644124452
   }
 }
