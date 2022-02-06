@@ -254,6 +254,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -288,14 +289,11 @@
           null
         ]
       },
-      "/Users/ianross/turing/2mod/relational_rails/app/controllers/ferrets_controller.rb": {
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/ferret_cages_controller.rb": {
         "lines": [
           1,
           1,
-          1,
-          null,
-          null,
-          1,
+          2,
           0,
           null,
           null
@@ -308,6 +306,6 @@
         ]
       }
     },
-    "timestamp": 1644167472
+    "timestamp": 1644169338
   }
 }

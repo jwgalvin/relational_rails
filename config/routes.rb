@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/cages/:id', to: 'cages#show'
   get '/ferrets', to: 'ferrets#index'
   get '/ferrets/:id', to: 'ferrets#show'
+  get '/cages/:cage_id/ferrets', to: 'ferret_cages#index'
 end
