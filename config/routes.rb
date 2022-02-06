@@ -8,9 +8,13 @@ Rails.application.routes.draw do
   get '/cults/:id', to: 'cults#show'
   get 'cults/new', to: 'cults#new'
   post '/cults', to: 'cults#create'
-  get '/cults/:id/edit', to: 'cults#edit'
-  patch '/cults/:id/', to: 'cults#update'
   get '/cults/:id/members/new', to: 'cult_members#new'
   post '/cults/:id/new', to: 'cult_members#create'
+
+  get '/cults/:id/edit', to: 'cults#edit'
+  patch '/cults/:id/', to: 'cults#update'
+  get '/members/:id/edit', to: 'members#edit'
+  patch '/members/:id/edit', to: 'members#update'
+
   delete '/cults/:id', to: 'cults#destroy'
 end

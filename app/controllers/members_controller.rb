@@ -13,4 +13,16 @@ class MembersController < ApplicationController
   def edit
     @member = Member.find(params[:id])
   end
+
+  def update
+    member = Member.find(params[:id])
+    member.update!({
+      name: params[:name],
+      married: params[:married],
+      children: params[:children]
+      })
+      #binding.pry
+      member.save
+      redirect_to "/members/#{member.id}"
+  end
 end

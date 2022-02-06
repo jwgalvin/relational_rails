@@ -3,8 +3,12 @@ class CultMembersController < ApplicationController
   def index
     @cults = Cult.find(params[:id])
     @members = @cults.members
-    # binding.pry
   end
+
+  # def show
+  #   @cults = Cult.find(params[:id])
+  #   @members = @cults.members
+  # end
 
   def new
     @cults = Cult.find(params[:id])
