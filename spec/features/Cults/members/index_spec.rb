@@ -74,10 +74,17 @@ describe "Cult members index page" do
     expect(page).to have_content("Vernon Howell")
   end
 
+  it "US 15, displays only true records" do
+    visit "/members"
+
+    expect(page).to have_content("Marshall Applewhite")
+    expect(page).to have_content("Bonnie Nettles")
+    expect(page).to_not have_content("Nonnie Bettles")
+  end
   it "US16, p1 there is a sort by abc button on the page" do
     visit "/cults/#{@heaven.id}/members"
 
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_button("Sort Cults Alphabetically")
   end
 

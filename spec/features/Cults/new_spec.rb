@@ -13,6 +13,7 @@ describe "US 11, will create a new cult" do
     visit "/cults"
     expect(page).to have_selector(:link_or_button, "New Cult")
     click_link('New Cult')
+    save_and_open_page
     expect(current_path).to eq('/cults/new')
   end
 

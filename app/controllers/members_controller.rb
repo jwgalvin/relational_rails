@@ -1,8 +1,4 @@
 class MembersController < ApplicationController
-  # def index
-  #   @member = Member.all
-  # end
-
   def show
     @member = Member.find(params[:id])
   end
@@ -17,7 +13,6 @@ class MembersController < ApplicationController
   def index
     @index = Member.all
     @member = @index.where(married: true).pluck
-    # binding.pry
     return @index
 
     redirect_to "/members"

@@ -5,9 +5,11 @@ class CultsController < ApplicationController
 
   def show
     @cults = Cult.find(params[:id])
+    # binding.pry
   end
 
   def new
+
   end
 
   def create
@@ -28,7 +30,7 @@ class CultsController < ApplicationController
   def cult_params
     params.permit(:name)
   end
-  
+
   def update
     cult = Cult.find(params[:id])
     cult.update({

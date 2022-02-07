@@ -49,19 +49,11 @@ describe "it has a button for cultist index." do
       expect(page).to have_selector(:link_or_button, "Cult Index")
     end
 
-    it "US 15, displays only true records" do
-      visit "/members"
-
-      expect(page).to have_content("Marshall Applewhite")
-      expect(page).to have_content("Bonnie Nettles")
-      expect(page).to_not have_content("Nonnie Bettles")
-    end
-
     it "US 17, update parent from parent page for each entry" do
-      visit "/members"
+      visit "/cults"
 
-      #save_and_open_page
-      click_button "Update Cult Here"
-      expect(path).to eq("/members/edit")
+      click_link "Update #{@heaven.name} here"
+      save_and_open_page
+      expect(current_path).to eq("/cults/#{@heaven.id}/edit")
     end
 end
