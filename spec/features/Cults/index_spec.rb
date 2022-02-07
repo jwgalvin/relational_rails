@@ -56,4 +56,6 @@ describe "it has a button for cultist index." do
       # save_and_open_page
       expect(current_path).to eq("/cults/#{@heaven.id}/edit")
     end
+
+
 end
