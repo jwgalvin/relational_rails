@@ -20,7 +20,7 @@ describe "Cult members index page" do
 
   it "links to each cultist" do
     visit "/members"
-    click_on @david.name
+    click_link("#{@david.name}")
     expect(current_path).to eq("/members/#{@david.id}")
   end
 
@@ -46,6 +46,12 @@ describe "Cult members index page" do
     expect(page).to have_selector(:link_or_button, "Cult Index")
     click_link('Cult Index')
     expect(current_path).to eq('/cults')
+  end
+  it "has a button that leads to edit page" do
+    visit "/members"
+
+    click_link "Update #{@marshall.name} here"
+    expect(current_path).to eq("/members/#{@marshall.id}/edit")
   end
 
 

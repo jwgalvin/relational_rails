@@ -12,8 +12,8 @@ class MembersController < ApplicationController
 
   def index
     @index = Member.all
-    @member = @index.where(married: true).pluck
-    return @index
+    @members = @index.where(married: true)
+    return @members
 
     redirect_to "/members"
   end
