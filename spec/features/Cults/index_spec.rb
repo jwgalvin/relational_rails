@@ -45,7 +45,6 @@ describe "it has a button for cultist index." do
 
     it "links to the /members page" do
       visit "/cults"
-      #save_and_open_page
       #click_on 'Cultist Index'
       expect(page).to have_selector(:link_or_button, "Cult Index")
     end
@@ -56,5 +55,13 @@ describe "it has a button for cultist index." do
       expect(page).to have_content("Marshall Applewhite")
       expect(page).to have_content("Bonnie Nettles")
       expect(page).to_not have_content("Nonnie Bettles")
+    end
+
+    it "US 17, update parent from parent page for each entry" do
+      visit "/members"
+
+      #save_and_open_page
+      click_button "Update Cult Here"
+      expect(path).to eq("/members/edit")
     end
 end
