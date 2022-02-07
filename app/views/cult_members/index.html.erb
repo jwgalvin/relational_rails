@@ -1,5 +1,8 @@
 <% @path = "/cults/#{@cults.id}/members/new" %>
 <button><a href='<%= @path%>'>Add Cult Member</a></button>
+<button> <%= link_to "Sort Cults Alphabetically", "/cults/#{@cults.id}/members?sort=true", method: :get%> </button>
+
+<% #binding.pry %>
 <% @members.each do |cultist| %>
     <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
     <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%></p>

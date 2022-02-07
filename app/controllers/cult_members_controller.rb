@@ -2,7 +2,11 @@ class CultMembersController < ApplicationController
 
   def index
     @cults = Cult.find(params[:id])
-    @members = @cults.members
+    if params[:sort]
+      @members = @cults.members.order(name: :asc)
+    else
+      @members = @cults.members
+    end
   end
 
   # def show
