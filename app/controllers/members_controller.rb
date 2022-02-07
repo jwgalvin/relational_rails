@@ -28,4 +28,9 @@ class MembersController < ApplicationController
       member.save
       redirect_to "/members/#{member.id}"
   end
+  def destroy
+    member = Member.find(params[:id])
+    member.destroy
+    redirect_to "/members"
+  end
 end

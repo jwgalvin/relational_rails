@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/members', to: 'members#index'
   get '/cults', to: 'cults#index'
   get '/cults/:id/members', to: 'cult_members#index'
-  get '/members/:id', to: "members#show"
+  get '/members/:id', to: 'members#show'
   get '/cults/new', to: 'cults#new'
   get '/cults/:id', to: 'cults#show'
 
@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 
 
   delete '/cults/:id', to: 'cults#destroy'
+  delete '/members/:id', to: 'members#destroy'
 end

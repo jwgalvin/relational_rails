@@ -7,3 +7,4 @@
 <p>Added to Database:<%= @member.created_at %></p>
 <p>Last updated<%= @member.updated_at %></p>
 <p>Cult member ID:<%= @member.id %></p>
+<button><%= link_to "Delete #{@member.name}", "/members/#{@member.id}", method: :delete %></button>
