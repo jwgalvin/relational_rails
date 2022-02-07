@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get '/members/:id/edit', to: 'members#edit'
   patch '/members/:id/edit', to: 'members#update'
 
+
   delete '/cults/:id', to: 'cults#destroy'
 end

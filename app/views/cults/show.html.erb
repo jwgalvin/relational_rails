@@ -5,11 +5,11 @@
 <button><a href=<%= @path%>>Update Cult Here</a></button>
 
 <h1><%= @cults.name %></h1>
-<p>Number of cultists:<%= @cults.member_size %></p>
-<p>Open to outsiders:<%= @cults.open_enrollment %></p>
-<p>First tracked:<%= @cults.created_at %></p>
-<p>Last updated:<%= @cults.updated_at %></p>
-<p>Database Id:<%=@cults.id %></p>
-
+<p>Number of cultists:<%= @cults.member_size %><br>
+Open to outsiders:<%= @cults.open_enrollment %><br>
+First tracked:<%= @cults.created_at %><br>
+Last updated:<%= @cults.updated_at %><br>
+Database Id:<%=@cults.id %></p>
+<button><%= link_to "Delete #{@cults.name}", "/cults/#{@cults.id}", method: :delete %></button>
 
 <h4>There are <%= @cults.count_members %> cultist listed.</h4>

@@ -42,4 +42,10 @@ class CultsController < ApplicationController
       cult.save
       redirect_to "/cults/#{cult.id}"
   end
+
+  def destroy
+    cult = Cult.find(params[:id])
+    cult.destroy
+    redirect_to "/cults"
+  end
 end
