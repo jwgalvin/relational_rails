@@ -6,6 +6,7 @@ describe "Cult members index page" do
     @waco = Cult.create!(name: "Branch Davidian", member_size: 42, open_enrollment: false)
     @marshall = @heaven.members.create!(name: "Marshall Applewhite", married: true, children: 2)
     @bonnie = @heaven.members.create!(name: "Bonnie Nettles", married: true, children: 0)
+    @nonnie = @heaven.members.create!(name: "Nonnie Bettles", married: false, children: 5)
     @david = @waco.members.create!(name: "David Khouresh", married: true, children: 32)
   end
 
@@ -69,9 +70,22 @@ describe "Cult members index page" do
 
     click_button 'Create Cult Member'
 
-
     expect(current_path).to eq("/cults/#{@waco.id}/members")
-    save_and_open_page
     expect(page).to have_content("Vernon Howell")
+  end
+
+  it "US16, p1 there is a sort by abc button on the page" do
+    visit "/cults/#{@heaven.id}/members"
+
+    save_and_open_page
+    expect(page).to have_button("Sort Cults Alphabetically")
+  end
+
+  it "US16, p2 toggling sort button makes it abc" do
+    visit "/cults/#{@heaven.id}/members"
+    click_link "Sort Cults Alphabetically"
+
+    expect(@bonnie.name).to appear_before(@marshall.name)
+    expect(@marshall.name).to appear_before(@nonnie.name)
   end
 end
