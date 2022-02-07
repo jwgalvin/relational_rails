@@ -13,4 +13,5 @@ class Cult < ApplicationRecord
 
   end
 
+  
 end

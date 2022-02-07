@@ -40,14 +40,21 @@ describe "it has a button for cultist index." do
       @science = Cult.create!(name: "Scientology", member_size: 4000)
       @marshall = @heaven.members.create!(name: "Marshall Applewhite", married: true, children: 0)
       @bonnie = @heaven.members.create!(name: "Bonnie Nettles", married: true, children: 0)
+      @nonnie = @heaven.members.create!(name: "Nonnie Bettles", married: false, children: 0)
     end
 
     it "links to the /members page" do
       visit "/cults"
       #save_and_open_page
       #click_on 'Cultist Index'
-
       expect(page).to have_selector(:link_or_button, "Cult Index")
     end
-  
+
+    it "US 15, displays only true records" do
+      visit "/members"
+
+      expect(page).to have_content("Marshall Applewhite")
+      expect(page).to have_content("Bonnie Nettles")
+      expect(page).to_not have_content("Nonnie Bettles")
+    end
 end

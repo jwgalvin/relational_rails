@@ -1,6 +1,6 @@
 <h1>Worldwide Cultist Index</h1>
-<% #binding.pry  %>
-<% @member.each do |cultist| %>
-    <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
-    <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%> Associated cult id:<%= cultist.cult_id%></p>
+<% boolean = @index.where(married: true).pluck%>
+<% boolean.each do |cultist| %>
+    <p><%= link_to cultist[1], "/members/#{cultist[0]}"%></p>
+    <p>Married:<%=cultist[2]%> Children:<%=cultist[3]%>  First tracked:<%=cultist[4]%>  Updated:<%=cultist[5]%>  Tracking number:<%=cultist[6]%></p>
 <%end%>

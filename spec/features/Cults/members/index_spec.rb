@@ -71,7 +71,7 @@ describe "Cult members index page" do
 
 
     expect(current_path).to eq("/cults/#{@waco.id}/members")
-    expect(page).to have_content("Vernon Howell")
     save_and_open_page
+    expect(page).to have_content("Vernon Howell")
   end
 end

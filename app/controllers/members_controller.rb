@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
-  def index
-    @member = Member.all
-  end
+  # def index
+  #   @member = Member.all
+  # end
 
   def show
     @member = Member.find(params[:id])
@@ -14,6 +14,14 @@ class MembersController < ApplicationController
     @member = Member.find(params[:id])
   end
 
+  def index
+    @index = Member.all
+    @member = @index.where(married: true).pluck
+    # binding.pry
+    return @index
+
+    redirect_to "/members"
+  end
   def update
     member = Member.find(params[:id])
     member.update!({
