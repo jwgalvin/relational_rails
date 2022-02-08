@@ -1,0 +1,12 @@
+<%= form_with url: "/cults/#{@cults.id}", method: :patch, local: true do |form|%>
+<h3>  Edit <%= "#{@cults.name}" %>'s data </h3>
+      <%= form.label "Edit cult name:" %>
+      <%= form.text_field :name%><br>
+      <%= form.label 'Member size:'%>
+      <%= form.text_field :member_size%><br>
+      <%= form.label 'Open enrollment:'%>
+      <%= form.text_field :open_enrollment%><br>
+      open_enrollment has to be boolean.<br>
+
+      <%= form.submit "Edit Cult"%>
+  <% end %>

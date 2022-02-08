@@ -42,4 +42,26 @@ describe "shows a Cult per page" do
 
     expect(page).to have_selector(:link_or_button, "Cult Index")
   end
+  xit "US 12, part 1 update parent button" do
+    visit "/cults/#{@heaven.id}"
+    click_button "Edit Cult"
+    expect(current_path).to eq("/cults/#{@heaven.id}/edit")
+  end
+
+  it "US12, part 2 has edit content on the page" do
+    visit "/cults/#{@heaven.id}/edit"
+    expect(page).to have_content('Edit cult name:')
+    expect(page).to have_content('Member size:')
+    expect(page).to have_content('Open enrollment:')
+  end
+
+
+  it "US 19, Delete parent from parent show page." do
+    visit "/cults/#{@heaven.id}"
+
+    click_link "Delete #{@heaven.name}"
+    expect(current_path).to eq("/cults")
+    expect(page).to_not have_content(@heaven.name)
+  end
+
 end
