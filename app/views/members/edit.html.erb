@@ -1,7 +1,7 @@
 <%= form_with url: "/members/#{@member.id}/edit", method: :patch, local: true do |form|%>
 
 <h3>  Input <%= "#{@member.name}" %>'s new data </h3>
-      <%= form.label "Edit member name" %>
+      <%= form.label "Edit member name:" %>
       <%= form.text_field :name%><br>
       <%= form.label 'Children count:'%>
       <%= form.text_field :children%><br>

@@ -95,4 +95,8 @@ describe "Cult members index page" do
     expect(@bonnie.name).to appear_before(@marshall.name)
     expect(@marshall.name).to appear_before(@nonnie.name)
   end
+
+  it "US 21, display records over given threshold" do
+      visit 
+  end
 end

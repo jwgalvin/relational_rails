@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post '/cults/:id/new', to: 'cult_members#create'
 
   get '/cults/:id/edit', to: 'cults#edit'
-  patch '/cults/:id/', to: 'cults#update'
+  patch '/cults/:id', to: 'cults#update'
   get '/members/:id/edit', to: 'members#edit'
   patch '/members/:id/edit', to: 'members#update'
 

@@ -53,8 +53,12 @@ describe "it has a button for cultist index." do
       visit "/cults"
 
       click_link "Update #{@heaven.name} here"
-      # save_and_open_page
+
       expect(current_path).to eq("/cults/#{@heaven.id}/edit")
+      fill_in('name', with: "Heavens's Gates")
+      # save_and_open_page
+      click_on("Edit Cult")
+      expect(current_path).to eq("/cults/#{@heaven.id}")
     end
 
 

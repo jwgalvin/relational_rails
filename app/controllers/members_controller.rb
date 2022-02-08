@@ -14,8 +14,6 @@ class MembersController < ApplicationController
     @index = Member.all
     @members = @index.where(married: true)
     return @members
-
-    redirect_to "/members"
   end
   def update
     member = Member.find(params[:id])
