@@ -54,5 +54,11 @@ describe "Cult members index page" do
     expect(current_path).to eq("/members/#{@marshall.id}/edit")
   end
 
+  it "US 23, delete child from child index for each entry" do
+    visit "/members"
+    click_link "Delete Marshall Applewhite"
+    # save_and_open_page
+    expect(page).to_not have_content(@marshall.name)
+  end
 
 end
