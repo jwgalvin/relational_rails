@@ -63,7 +63,8 @@ describe "it has a button for cultist index." do
 
     it "US 22, delete parent from parent index for each entry" do
       visit "/cults"
-      click_button "Delete Heaven's Gate"
+      click_link "Delete Heaven's Gate"
+      # save_and_open_page
       expect(page).to_not have_content(@heaven.name)
     end
 end

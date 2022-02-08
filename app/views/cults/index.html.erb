@@ -5,4 +5,5 @@
   <h3><%= cult.name%> options below</h3>
   <button><a href=<%="/cults/#{cult.id}"%>>View <%= "#{cult.name}"%></a></button>
   <button><a href=<%="/cults/#{cult.id}/edit"%>>Update <%= "#{cult.name}"%> here</a></button>
+  <button><%= link_to "Delete #{cult.name}", "/cults/#{cult.id}", method: :delete %></button>
 <% end%>
