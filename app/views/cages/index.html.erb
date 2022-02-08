@@ -1,4 +1,4 @@
 <h1>Ferret Cages</h1>
-<% @cages.each do |cage| %>
-  <li><%= cage.title %></li>
+<% @cages.order(created_at: :desc).each do |cage| %>
+  <h3><%= cage.title%>: <%= cage.created_at.strftime("%m/%d at %H:%M %p") %></h3> 
 <% end %>
