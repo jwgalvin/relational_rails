@@ -1,0 +1,7 @@
+<h1><%= @cage.title %></h1>
+
+<% @ferrets.each do |ferret| %>
+<p><%= ferret.name %></p>
+<li>Is clean: <%= ferret.is_clean %></l1>
+<li>Age: <%= ferret.age %></l1>
+<% end %>
