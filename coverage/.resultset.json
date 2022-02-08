@@ -287,11 +287,11 @@
         "lines": [
           1,
           1,
-          3,
+          0,
           null,
           null,
           1,
-          0,
+          3,
           null,
           null
         ]
@@ -301,8 +301,15 @@
           1,
           null
         ]
+      },
+      "/Users/ianross/turing/2mod/relational_rails/app/models/ferret.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1644354236
+    "timestamp": 1644354852
   }
 }
