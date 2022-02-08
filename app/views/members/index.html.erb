@@ -1,6 +1,9 @@
 <h1>Worldwide Cultist Index</h1>
-<% #binding.pry  %>
-<% @member.each do |cultist| %>
+
+<% @members.each do |cultist| %>
+
     <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
-    <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%> Associated cult id:<%= cultist.cult_id%></p>
+    <p>Married:<%=cultist.married%> Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.cult_id%><br>
+    <button><a href=<%="/members/#{cultist.id}/edit"%>>Update <%= "#{cultist.name}"%> here</a></button>
+    <button><%= link_to "Delete #{cultist.name}", "/members/#{cultist.id}", method: :delete %></button><br></p>
 <%end%>

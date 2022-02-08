@@ -1,0 +1,39 @@
+<%= form_with url: "/cults/#{@cults.id}/new", method: :post, local:true do |form| %>
+
+  <h3>  Fill out <%= "#{@cults.name}" %>'s new member below </h3>
+  <%= form.label 'Cultist name:'%>
+  <%= form.text_field :name%><br>
+  <%= form.label 'Children count:'%>
+  <%= form.text_field :children%><br>
+  <%= form.label 'Marital status:'%>
+  <%= form.text_field :married%><br>
+
+  Marital status is true or false.<br>
+
+
+  <%= form.submit "Create Cult Member"%>
+  <% end %>
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
+  <p></p>
+  <p></p>
+  Cultist's name:<br>
+  <input type="text" name="member[name]" /><br/n>
+  Children count: <br>
+  <input type="integer"name='member[children]'><br>
+  Marital status: <br>
+  <input type="boolean"name='member[open_enrollment]'><br>
+  <input type='submit'>
+</form> -->

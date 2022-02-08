@@ -1,0 +1,11 @@
+<%= form_with url: '/cults', method: :post, local: true do |form|%>
+    <%= form.label "New cult name" %>
+    <%= form.text_field :name %><br>
+    <%= form.label "Member size" %>
+    <%= form.text_field :member_size %><br>
+    <%= form.label "Open enrollment" %>
+    <%= form.text_field :open_enrollment %><br>
+    Open Enrollment must be true or false <br>
+
+    <%= form.submit "Create Cult"%>
+<% end %>

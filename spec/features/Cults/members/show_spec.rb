@@ -23,7 +23,16 @@ describe "shows a single page" do
     visit "/members/#{@member.id}"
     #save_and_open_page
     #click_button 'Cultist Index'
-
     expect(page).to have_selector(:link_or_button, "Cult Index")
   end
+
+  it "US 20, Delete child from db." do
+    visit "/members/#{@member.id}"
+
+    click_link "Delete #{@member.name}"
+    expect(current_path).to eq("/members")
+    expect(page).to_not have_content(@member.name)
+  end
+
+
 end

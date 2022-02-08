@@ -1,13 +1,15 @@
 class Cult < ApplicationRecord
-  has_many :members
+  has_many :members, dependent: :destroy
 
-  def average_num_kids
-    members.average(:children)
-  end
+  validates_presence_of :name
+  validates_presence_of :member_size
 
   def count_members
-    # binding.pry
     members.count
+  end
+
+  def new
+
   end
 
 
