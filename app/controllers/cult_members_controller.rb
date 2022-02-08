@@ -4,6 +4,8 @@ class CultMembersController < ApplicationController
     @cults = Cult.find(params[:id])
     if params[:sort]
       @members = @cults.members.order(name: :asc)
+    elsif params[:number]
+      @members = @cults.members.where('children > ?', params[:number])
     else
       @members = @cults.members
     end

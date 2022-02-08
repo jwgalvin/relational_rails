@@ -98,8 +98,8 @@ describe "Cult members index page" do
 
   it "US 21, display records over given threshold" do
       visit "/cults/#{@heaven.id}/members"
-      fill_in ('children', 4)
-      click_link "Find the breeders!"
+      fill_in('number', with: 4)
+      click_button "Find the breeders!"
       expect(page).to have_content(@nonnie.name)
       expect(page).to_not have_content(@marshall.name)
   end
