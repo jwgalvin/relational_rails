@@ -61,5 +61,9 @@ describe "it has a button for cultist index." do
       expect(current_path).to eq("/cults/#{@heaven.id}")
     end
 
-
+    it "US 22, delete parent from parent index for each entry" do
+      visit "/cults"
+      click_button "Delete Heaven's Gate"
+      expect(page).to_not have_content(@heaven.name)
+    end
 end
