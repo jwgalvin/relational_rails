@@ -1,5 +1,5 @@
 op<h1>   Here there be Ferrets and Cults! This README will quide your path! </h1>
-![image](Holy_ferret.png)
+![image](https://github.com/jwgalvin/relational_rails/blob/joeianmerged/Holy_Ferret.png)
 
 <h3> Set correct versions</h2>
 Make sure you have ```ruby v 2.7.4 & rails 5.2.6```
