@@ -1,6 +1,6 @@
 class CultsController < ApplicationController
   def index
-    @cults= Cult.all
+    @cults= Cult.order(created_at: :desc)
   end
 
   def show
