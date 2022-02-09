@@ -27,11 +27,15 @@ describe "shows a single page" do
     visit "/members/#{@member.id}"
 
     expect(page).to have_selector(:link_or_button, "Cult Index")
+    click_link "Cult Index"
+    expect(current_path).to eq("/cults")
   end
 
   it "links to the /cult members" do
     visit "/cults/#{@cult.id}"
 
     expect(page).to have_selector(:link_or_button, "#{@cult.name} Member's Index")
+    click_link "#{@cult.name} Member's Index"
+    expect(current_path).to eq("/cults/#{@cult.id}/members")
   end
 end

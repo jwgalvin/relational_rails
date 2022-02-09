@@ -12,8 +12,6 @@ describe "Cult members index page" do
 
   it "can see a page with all members" do
     visit "cults/#{@heaven.id}/members"
-    # save_and_open_page
-
     expect(page).to have_content("Cultist Index")
     expect(page).to have_content(@marshall.name)
     expect(page).to have_content(@bonnie.name)
@@ -40,7 +38,7 @@ describe "Cult members index page" do
 
   it "links to the /members page" do
     visit "/cults/#{@heaven.id}/members"
-    #save_and_open_page
+
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")
     click_button 'Cultist Index'
@@ -51,7 +49,6 @@ describe "Cult members index page" do
     visit "/cults/#{@waco.id}/members"
     expect(page).to have_content("Add Cult Member")
     click_link 'Add Cult Member'
-    # save_and_open_page
     expect(current_path).to eq("/cults/#{@waco.id}/members/new")
   end
 
@@ -84,7 +81,6 @@ describe "Cult members index page" do
   it "US16, p1 there is a sort by abc button on the page" do
     visit "/cults/#{@heaven.id}/members"
 
-    # save_and_open_page
     expect(page).to have_button("Sort Cults Alphabetically")
   end
 

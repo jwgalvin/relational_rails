@@ -11,8 +11,6 @@ describe "Cult members index page" do
 
   it "can see a page with all members" do
     visit "/members"
-    #save_and_open_page
-
     expect(page).to have_content("Worldwide Cultist Index")
     expect(page).to have_content(@marshall.name)
     expect(page).to have_content(@bonnie.name)
@@ -26,7 +24,6 @@ describe "Cult members index page" do
 
   it "includes data from each cultist" do
     visit "/members"
-    #save_and_open_page
     expect(page).to have_content(@marshall.name)
     expect(page).to have_content(@bonnie.married)
     expect(page).to have_content(@david.children)
@@ -57,7 +54,6 @@ describe "Cult members index page" do
   it "US 23, delete child from child index for each entry" do
     visit "/members"
     click_link "Delete Marshall Applewhite"
-    # save_and_open_page
     expect(page).to_not have_content(@marshall.name)
   end
 

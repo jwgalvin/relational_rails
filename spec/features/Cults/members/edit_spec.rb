@@ -32,7 +32,6 @@ describe "Edit cultist page" do
     click_button "Edit Cult Member"
 
     expect(current_path).to eq("/members/#{@marshall.id}")
-    #save_and_open_page
   end
 
 end
