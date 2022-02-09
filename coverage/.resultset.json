@@ -265,6 +265,73 @@
           null
         ]
       },
+      "/Users/ianross/turing/2mod/relational_rails/spec/features/cages/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ianross/turing/2mod/relational_rails/spec/features/cages/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ianross/turing/2mod/relational_rails/app/models/cage.rb": {
         "lines": [
           1,
@@ -283,15 +350,19 @@
           null
         ]
       },
-      "/Users/ianross/turing/2mod/relational_rails/app/controllers/cages_controller.rb": {
+      "/Users/ianross/turing/2mod/relational_rails/app/models/ferret.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
-          null,
+          null
+        ]
+      },
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/ferret_cages_controller.rb": {
+        "lines": [
           1,
-          3,
+          1,
+          2,
+          2,
           null,
           null
         ]
@@ -302,14 +373,20 @@
           null
         ]
       },
-      "/Users/ianross/turing/2mod/relational_rails/app/models/ferret.rb": {
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/cages_controller.rb": {
         "lines": [
           1,
           1,
+          5,
+          null,
+          null,
+          1,
+          4,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1644354852
+    "timestamp": 1644434716
   }
 }
