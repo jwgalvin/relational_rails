@@ -1,5 +1,5 @@
 op<h1>   Here there be Ferrets and Cults! This README will quide your path! </h1>
-![alt text]"Holy_ferret"
+![image](Holy_ferret.png)
 
 <h3> Set correct versions</h2>
 Make sure you have ```ruby v 2.7.4 & rails 5.2.6```
