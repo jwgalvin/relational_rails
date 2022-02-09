@@ -1,4 +1,4 @@
-op<h1>   Here there be Ferrets and Cults! This README will guide your path! </h1>
+<h1>   Here there be Ferrets and Cults! This README will guide your path! </h1>
 ![image](https://github.com/jwgalvin/relational_rails/blob/joeianmerged/Holy_Ferret.png)
 
 <h3> Set correct versions</h2>
