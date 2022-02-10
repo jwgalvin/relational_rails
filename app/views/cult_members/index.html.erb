@@ -5,7 +5,7 @@
 <% #binding.pry %>
 <% @members.each do |cultist| %>
     <p><%= link_to cultist.name, "/members/#{cultist.id}"%></p>
-    <p>Married:<%= cultist.married %>  Children:<%=cultist.children%>  First tracked:<%=cultist.created_at%>  Updated:<%=cultist.updated_at%>  Tracking number:<%=cultist.id%></p>
+    <p>Married: <%= cultist.married %>  Children: <%=cultist.children%>  First tracked: <%=cultist.created_at%>  Updated: <%=cultist.updated_at%>  Tracking number: <%=cultist.id%></p>
 <%end%>
 
 <%=form_with url:"/cults/#{@cults.id}/members?", method: :get, local: true do |form| %>

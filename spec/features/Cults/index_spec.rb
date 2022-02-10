@@ -11,7 +11,6 @@ describe "index page for Cults" do
   it "can see a page with all members" do
 
     visit '/cults'
-    #save_and_open_page
     expect(@science.name).to appear_before(@waco.name)
     expect(@waco.name).to appear_before(@heaven.name)
   end
@@ -27,10 +26,9 @@ describe "it has a button for cultist index." do
 
   it "links to the /members page" do
     visit "/cults"
-    #save_and_open_page
-    #click_button 'Cultist Index'
 
-    expect(page).to have_selector(:link_or_button, "Cultist Index")
+    click_link "Cult Index"
+    expect(current_path).to eq("/cults")
   end
 end
 describe "it has a button for cultist index." do
@@ -45,8 +43,8 @@ describe "it has a button for cultist index." do
 
     it "links to the /members page" do
       visit "/cults"
-      #click_on 'Cultist Index'
-      expect(page).to have_selector(:link_or_button, "Cult Index")
+      click_link "Cultist Index"
+      expect(current_path).to eq("/members")
     end
 
     it "US 17, update parent from parent page for each entry" do
@@ -56,7 +54,6 @@ describe "it has a button for cultist index." do
 
       expect(current_path).to eq("/cults/#{@heaven.id}/edit")
       fill_in('name', with: "Heavens's Gates")
-      # save_and_open_page
       click_on("Edit Cult")
       expect(current_path).to eq("/cults/#{@heaven.id}")
     end
@@ -64,7 +61,6 @@ describe "it has a button for cultist index." do
     it "US 22, delete parent from parent index for each entry" do
       visit "/cults"
       click_link "Delete Heaven's Gate"
-      # save_and_open_page
       expect(page).to_not have_content(@heaven.name)
     end
 end

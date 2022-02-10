@@ -14,16 +14,17 @@ describe "shows a single page" do
 
   it "links to the /members page" do
     visit "/members/#{@member.id}"
-    #save_and_open_page
-    #click_button 'Cultist Index'
 
     expect(page).to have_selector(:link_or_button, "Cultist Index")
+    click_link "Cultist Index"
+    expect(current_path).to eq("/members")
   end
   it "links to the /members page" do
     visit "/members/#{@member.id}"
-    #save_and_open_page
-    #click_button 'Cultist Index'
+
     expect(page).to have_selector(:link_or_button, "Cult Index")
+    click_link "Cult Index"
+    expect(current_path).to eq("/cults")
   end
 
   it "US 20, Delete child from db." do

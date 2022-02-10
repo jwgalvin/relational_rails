@@ -1,7 +1,7 @@
 <button><a href="/cults/new">New Cult</a></button>
 
 <h1>Cults Index</h1>
-<%  Cult.order(created_at: :desc).each do |cult| %>
+<%  @cults.each do |cult| %>
   <h3><%= cult.name%> options below</h3>
   <button><a href=<%="/cults/#{cult.id}"%>>View <%= "#{cult.name}"%></a></button>
   <button><a href=<%="/cults/#{cult.id}/edit"%>>Update <%= "#{cult.name}"%> here</a></button>

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe "shows a Cult per page" do
-  #This test Clickable cult name
   before(:each) do
     @heaven = Cult.create!(name: "Heaven's Gate", member_size: 323, open_enrollment: true)
     @waco = Cult.create!(name: "Branch Davidian", member_size: 42, open_enrollment: false)
@@ -11,7 +10,6 @@ describe "shows a Cult per page" do
   end
   it "Shows one Cult" do
     visit "/cults/#{@heaven.id}"
-    #save_and_open_page
     expect(page).to have_content(@heaven.name)
     expect(page).to have_content(@heaven.member_size)
     expect(page).to have_content(@heaven.open_enrollment)
@@ -20,31 +18,28 @@ describe "shows a Cult per page" do
     expect(page).to_not have_content(@waco.name)
   end
 
-    it "displays the number of members at the bottom of the page." do
+  it "displays the number of members at the bottom of the page." do
 
     visit "/cults/#{@heaven.id}"
-    #save_and_open_page
     expect(@heaven.count_members).to eq(3)
     expect(page).to have_content("There are 3 cultist listed.")
   end
 
   it "links to the /members page" do
     visit "/cults/#{@heaven.id}"
-    #save_and_open_page
-    #click_button 'Cultist Index'
-
-    expect(page).to have_selector(:link_or_button, "Cultist Index")
+    click_link "Cultist Index"
+    expect(current_path).to eq("/members")
   end
+
   it "links to the /members page" do
     visit "/cults/#{@heaven.id}"
-    #save_and_open_page
-    #click_button 'Cultist Index'
-
-    expect(page).to have_selector(:link_or_button, "Cult Index")
+    click_link "Cult Index"
+    expect(current_path).to eq("/cults")
   end
-  xit "US 12, part 1 update parent button" do
+
+  it "US 12, part 1 update parent button" do
     visit "/cults/#{@heaven.id}"
-    click_button "Edit Cult"
+    click_link "Update Cult Here"
     expect(current_path).to eq("/cults/#{@heaven.id}/edit")
   end
 
@@ -58,7 +53,6 @@ describe "shows a Cult per page" do
 
   it "US 19, Delete parent from parent show page." do
     visit "/cults/#{@heaven.id}"
-
     click_link "Delete #{@heaven.name}"
     expect(current_path).to eq("/cults")
     expect(page).to_not have_content(@heaven.name)

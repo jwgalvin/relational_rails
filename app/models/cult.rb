@@ -9,8 +9,5 @@ class Cult < ApplicationRecord
   end
 
   def new
-
   end
-
-
 end
