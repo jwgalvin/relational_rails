@@ -12,4 +12,4 @@ Make sure you have ```ruby v 2.7.4 & rails 5.2.6```
   <p>rails db:seed</p>
 
 <h3>To check out our test suite:</h3>
-  <p>In the command line type- bundle exec rspec, or just rspec</p>
+  <p>In the command line type- bundle exec rspec</p>
