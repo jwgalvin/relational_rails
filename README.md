@@ -1,4 +1,5 @@
-op<h1>   Here there be Ferrets and Cults! This README will quide your path! </h1>
+<h1>   Here there be Ferrets and Cults! This README will quide your path! </h1>
+
 <img src="Holy_ferret">
 
 <h3> Set correct versions</h2>

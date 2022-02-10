@@ -1,5 +1,3 @@
 <h1> <%= @cage.title %> </h1>
-
-<p><li>Is open?: <%= @cage.is_open %></li></p>
-<p><li>Ferret count: <%= @cage.ferret_count %></li></p>
-<p><li>Ferret capacity: <%= @cage.ferret_capacity %></li></p>
+<h3>There are <%= @cage.ferret_count %> ferrets in this cage</h3>
+<li><button><a href="/ferrets"><%="#{@cage.title}"'s Ferrets'%></a></button></li>

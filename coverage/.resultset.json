@@ -248,6 +248,7 @@
           1,
           1,
           1,
+<<<<<<< HEAD
           1,
           null,
           1,
@@ -262,6 +263,10 @@
           null,
           1,
           1,
+=======
+          null,
+          null,
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null,
           1,
           1,
@@ -277,6 +282,7 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/ianross/turing/2mod/relational_rails/spec/features/Cults/members/edit_spec.rb": {
         "lines": [
           1,
@@ -595,6 +601,8 @@
           null
         ]
       },
+=======
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
       "/Users/ianross/turing/2mod/relational_rails/spec/features/cages/index_spec.rb": {
         "lines": [
           1,
@@ -606,6 +614,27 @@
           null,
           1,
           null,
+<<<<<<< HEAD
+=======
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null
         ]
       },
@@ -618,7 +647,10 @@
           1,
           1,
           1,
+<<<<<<< HEAD
           1,
+=======
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null,
           1,
           1,
@@ -628,6 +660,7 @@
           1,
           1,
           1,
+<<<<<<< HEAD
           1,
           null,
           1,
@@ -641,6 +674,10 @@
       "/Users/ianross/turing/2mod/relational_rails/spec/features/ferrets/index_spec.rb": {
         "lines": [
           1,
+=======
+          null,
+          1,
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null,
           1,
           1,
@@ -652,6 +689,7 @@
           null,
           1,
           null,
+<<<<<<< HEAD
           null
         ]
       },
@@ -795,6 +833,8 @@
           2,
           2,
           null,
+=======
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null,
           null
         ]
@@ -817,6 +857,7 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/ianross/turing/2mod/relational_rails/spec/models/cult_spec.rb": {
         "lines": [
           1,
@@ -854,6 +895,8 @@
           null
         ]
       },
+=======
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
       "/Users/ianross/turing/2mod/relational_rails/app/models/ferret.rb": {
         "lines": [
           1,
@@ -861,6 +904,7 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/ianross/turing/2mod/relational_rails/spec/models/member_spec.rb": {
         "lines": [
           1,
@@ -924,6 +968,12 @@
           null,
           1,
           2,
+=======
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/ferret_cages_controller.rb": {
+        "lines": [
+          1,
+          1,
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           2,
           2,
           null,
@@ -936,6 +986,7 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/ianross/turing/2mod/relational_rails/app/controllers/members_controller.rb": {
         "lines": [
           1,
@@ -944,11 +995,19 @@
           null,
           null,
           1,
+=======
+      "/Users/ianross/turing/2mod/relational_rails/app/controllers/cages_controller.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null,
           null,
           1,
           4,
           null,
+<<<<<<< HEAD
           null,
           1,
           13,
@@ -1033,10 +1092,16 @@
           1,
           0,
           null,
+=======
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
           null
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1644454878
+=======
+    "timestamp": 1644434716
+>>>>>>> 9a6c2fa9a064ddfd13791def3a634d5f55c8df18
   }
 }
